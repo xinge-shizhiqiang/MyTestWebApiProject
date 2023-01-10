@@ -10,7 +10,7 @@ namespace MyTestWebApiProject
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        //[StringLength(1)]
+        [StringLength(1)]
         public string? Summary { get; set; }
     }
 }
