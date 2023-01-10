@@ -18,8 +18,8 @@ namespace MyTestWebApiProject.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpPost(Name = "GetWeatherForecast")]
+        public IEnumerable<WeatherForecast> Get([FromBody]WeatherForecast pm)
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
